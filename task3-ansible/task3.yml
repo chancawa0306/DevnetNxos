@@ -1,0 +1,19 @@
+
+
+  - name: interface and ip
+    hosts: n9k
+    connection: local
+
+    tasks:
+      - name: create loopback interface
+        nxos_interface:
+              name: Loopback3
+              state: present
+      - name: ip address of the interface
+        nxos_l3_interface:
+              name: Loopback3
+              ipv4: 3.3.3.3/32
+      - name: Admin up an interface
+        nxos_interface:
+              name: Loopback3
+              admin_state: up

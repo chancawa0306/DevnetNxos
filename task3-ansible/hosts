@@ -1,0 +1,5 @@
+[n9k]
+10.75.37.244
+[all:vars]
+ansible_user=admin
+ansible_ssh_pass=cisco
